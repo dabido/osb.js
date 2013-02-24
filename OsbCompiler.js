@@ -108,10 +108,10 @@ define(function (require, exports, module) {
             
             for (sprite in sprites) {
                 chain = sprites[sprite].getChain();
-                output.push(chain.join("\n"));
+                output.push(chain.join("\r\n"));
             }
             
-            writeOsb(output.join("\n\n"));
+            writeOsb("[Events]\r\n" + output.join("\r\n\r\n") + "\r\n ");
         });
     }
    
